@@ -1,6 +1,6 @@
 
 
-let socket = new WebSocket("ws://localhost:8080");
+let socket = new WebSocket("ws://178.159.46.168:4000");
 
 socket.onopen = () => {
     console.log("Соединение установлено.");

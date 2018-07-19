@@ -1,0 +1,23 @@
+.custom_card{
+    float: none !important;
+    margin: 20px auto;
+}
+.custom_card form{
+    padding: 30px;
+}
+
+.custom_card form .row{
+    margin-bottom: 0;
+}
+a.custom_button{
+    display: block;
+}
+.big_card{
+    height: 400px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.message_p{
+    font-size: 18px;
+    color: red;
+}

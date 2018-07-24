@@ -1,6 +1,6 @@
 
 
-let socket = new WebSocket("ws://178.159.46.168:4000");
+let socket = new WebSocket("ws://localhost:4000");
 
 socket.onopen = () => {
     console.log("Соединение установлено.");
@@ -18,18 +18,18 @@ socket.onmessage = (event) => {
     console.log(array);
     let str = "";
     for(let key in array){
-        str += "<p class='message_p'>"+array[key]+"</p>";
-        document.getElementsByClassName("big_card")[0].innerHTML = str;
+        str += "<li class='me'><div class='name'><span class=''>Cucu Ionel</span></div><div class='message'><p>"+ array[key] +"</p><span class='msg-time'>5:00 pm</span></div></li>";
+        document.getElementById("content_ul").innerHTML = str;
     }
 };
 
-let name;
+// let name;
 let message;
 let button = document.getElementById("custom_button");
 button.onclick = () => {
-    name = document.getElementById("name").value;
+    // name = document.getElementById("name").value;
     message = document.getElementById("message").value;
-    socket.send(name + ": "+message);
+    socket.send(message);
     document.getElementById("message").value = "";
 };
 
